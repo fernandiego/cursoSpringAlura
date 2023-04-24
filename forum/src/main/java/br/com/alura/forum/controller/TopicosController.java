@@ -1,5 +1,6 @@
 package br.com.alura.forum.controller;
 
+import br.com.alura.forum.controller.dto.DetalhesDoTopicoDTO;
 import br.com.alura.forum.controller.dto.TopicoDTO;
 import br.com.alura.forum.controller.form.TopicoForm;
 import br.com.alura.forum.modelo.Topico;
@@ -7,7 +8,6 @@ import br.com.alura.forum.repository.CursoRepository;
 import br.com.alura.forum.repository.TopicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -46,9 +46,9 @@ public class TopicosController {
     }
 
     @GetMapping("/{id}")
-    public TopicoDTO detalhar(@PathVariable Long id) {
+    public DetalhesDoTopicoDTO detalhar(@PathVariable Long id) {
         Topico topico = topicoRepository.getOne(id);
-        return new TopicoDTO(topico);
+        return new DetalhesDoTopicoDTO(topico);
     }
 }
 
