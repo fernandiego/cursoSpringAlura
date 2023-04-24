@@ -15,7 +15,7 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping(value = "/topicos")
 public class TopicosController {
 
@@ -45,5 +45,11 @@ public class TopicosController {
         return ResponseEntity.created(uri).body(new TopicoDTO(topico));
     }
 
+    @GetMapping("/{id}")
+    public TopicoDTO detalhar(@PathVariable Long id) {
+        Topico topico = topicoRepository.getOne(id);
+        return new TopicoDTO(topico);
+    }
 }
+
 

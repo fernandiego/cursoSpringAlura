@@ -1,0 +1,8 @@
+###fazRequest
+GET http://localhost:8080/topicos
+
+###fazRequestId
+GET http://localhost:8080/topicos/1
+
+
+
