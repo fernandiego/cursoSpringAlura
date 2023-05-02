@@ -2,7 +2,7 @@
 GET http://localhost:8080/topicos
 
 ###fazRequestId
-GET http://localhost:8080/topicos/3
+GET http://localhost:8080/topicos/30
 
 
 ###fazUpdateId
@@ -16,6 +16,8 @@ Content-Type: application/json
 
 
 
-
+###fazDeleteId
+DELETE http://localhost:8080/topicos/30
+Content-Type: application/json
 
 
