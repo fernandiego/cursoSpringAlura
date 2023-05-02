@@ -2,7 +2,20 @@
 GET http://localhost:8080/topicos
 
 ###fazRequestId
-GET http://localhost:8080/topicos/1
+GET http://localhost:8080/topicos/3
+
+
+###fazUpdateId
+PUT http://localhost:8080/topicos/3
+Content-Type: application/json
+
+{
+  "titulo":"Atualizado",
+  "mensagem":"Mensagem nova"
+}
+
+
+
 
 
 
